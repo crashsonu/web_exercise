@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>Bulb</title>
+<meta name="meta" charset="utf-8">
+</head>
+
+<body>
+    <h2>Bulb on off</h2>
+    <button type="button" id="bt4" onclick= bulb_set()>Turn Off</button>
+    <img src="media/bulb_on.jpg" alt="bulb off image" id="img1" height=100 width=100>
+    <br><br>
+</body>
+
+<script type="text/javascript">
+  var bulb_set= function(){
+    if(document.getElementById('bt4').innerHTML=="Turn Off"){
+      document.getElementById("img1").src="media/bulb_off.jpg"
+    }
+    else{
+      document.getElementById("img1").src="media/bulb_on.jpg"
+    }
+
+  btn_on_off_func('bt4');
+
+  }
+</script>
+
+<script type="text/javascript" src="scripts/btn_on_off.js">
+</script>
+
+</html>

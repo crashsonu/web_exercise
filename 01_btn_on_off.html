@@ -10,19 +10,11 @@
     <br>
     <br>
     <div align="center">
-      <button type="button" id="bt1" onclick=btn_on_off_func()>Turn On</button>
+      <button type="button" id="bt1" onclick=btn_on_off_func('bt1')>Turn On</button>
     </div>
   </body>
 
-  <script type="text/javascript">
-    var btn_on_off_func = function(){
-      if(document.getElementById('bt1').innerHTML=="Turn On"){
-        document.getElementById('bt1').innerHTML="Turn Off"
-      }
-      else {
-        document.getElementById('bt1').innerHTML="Turn On"
-      }
-    }
+  <script type="text/javascript" src="scripts/btn_on_off.js">
   </script>
 
 </html>
