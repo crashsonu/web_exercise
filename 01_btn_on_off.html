@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Button on-off</title>
+  </head>
+
+  <body>
+    <h2 align="center" style="color:green" >Turn light on-off</h2>
+    <br>
+    <br>
+    <div align="center">
+      <button type="button" id="bt1" onclick=btn_on_off_func()>Turn On</button>
+    </div>
+  </body>
+
+  <script type="text/javascript">
+    var btn_on_off_func = function(){
+      if(document.getElementById('bt1').innerHTML=="Turn On"){
+        document.getElementById('bt1').innerHTML="Turn Off"
+      }
+      else {
+        document.getElementById('bt1').innerHTML="Turn On"
+      }
+    }
+  </script>
+
+</html>
