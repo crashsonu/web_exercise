@@ -9,13 +9,14 @@
   <body align="center">
     <h2>Click on Button to Max-min</h2>
     <button type="button" id="bt2" onclick=size_inc_func()> + </button>
-    <!-- <button type="button" id="bt3" onclick= size_dec_func()> - </button> -->
+    <button type="button" id="bt3" onclick= size_dec_func()> - </button>
     <br>
     <br>
     <button type="button" id="bt1" style="height:50px; width:100px;">Click me</button>
   </body>
 
   <script type="text/javascript">
+    //this is function for increasing the size of button
     var size_inc_func= function(){
       // Increasing height.
       let current_height= document.getElementById('bt1').style.height;
@@ -41,6 +42,27 @@
       let new_width_int=parseInt(splited_width[0]);
       let added_width_int=new_width_int+10;
       let new_width_str=added_width_int.toString()+'px';
+      console.log(new_width_str);
+      document.getElementById('bt1').style.width=new_width_str;
+    }
+
+    //this is the function for decreasing the sixe of Button
+    var size_dec_func=function(){
+      //decreasing height.
+      let current_height=document.getElementById('bt1').style.height;
+      let splited_height=current_height.split('px');
+      let new_height_int=parseInt(splited_height[0]);
+      let minus_height_int=new_height_int-10;
+      let new_height_str=minus_height_int.toString()+'px';
+      console.log(new_height_str);
+      document.getElementById('bt1').style.height=new_height_str;
+
+      //decreasing width.
+      let current_width=document.getElementById('bt1').style.width;
+      let splited_width=current_width.split('px');
+      let new_width_int=parseInt(splited_width[0]);
+      let minus_width_int=new_width_int-10;
+      let new_width_str=minus_width_int.toString()+'px'
       console.log(new_width_str);
       document.getElementById('bt1').style.width=new_width_str;
     }
