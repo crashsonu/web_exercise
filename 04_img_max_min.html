@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Change Image size</title>
+  </head>
+  <body>
+    <h2>image size increase decrease</h2>
+    <button type="button" id="inc_bt" onclick= size_inc_func()>increase</button>
+    <button type="button" id="dec_bt" onclick= size_dec_func()>decrease</button>
+    <img src="media/bulb_on.jpg" alt="bulb off image" id="img1" height=100 width=100>
+  </body>
+
+  <script type="text/javascript">
+    var size_inc_func = function () {
+      let current_height = document.getElementById('img1').height;
+      document.getElementById('img1').height = current_height + 5;
+      let current_size = document.getElementById('img1').width;
+      document.getElementById('img1').width = current_size + 5;
+      }
+
+    function size_dec_func() {
+      let current_height = document.getElementById('img1').height;
+      document.getElementById('img1').height = current_height - 5;
+      let current_size = document.getElementById('img1').width;
+      document.getElementById('img1').width = current_size - 5;
+    }
+  </script>
+
+</html>
