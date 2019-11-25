@@ -1,0 +1,98 @@
+1) Master Admin.
+	1.1 ) Define The routes,  i.e. (Mumbai To Pune)
+		a) All Boarding points. (vashi, sanpada, nerul, panvel)
+		b) All Droping points. (wakad, kothrud, karvenagar, etc.)
+
+	2.2) Add new buses.
+		a) Bus Name
+		b) Bus Route Code
+		c) types of seats (sleeper, semi_sleeper, ac_sleeper, seating, ac_seating.)
+		d) Total Number of seats.
+		e) Bus Seating structure (map).
+		f) Bus running dates.
+		g) Bus boarding time and arrival time.
+		h) Bus rating.
+		i) Bus Fare.
+		j) Ticket Cancelation policy and conditions.
+
+
+2) Local Agent can book his clients seats online using app (but he doesnt needs to make a payment.)
+	He should have to fill below inputs.
+	a) Number of Passengers
+	b) Id Number of reserved seats
+	c) Mobile Number of main Passenger.
+	d) Each passenger name.
+	e) Each passenger age.
+	f) Each passenger sex.
+	g) Boarding point.
+	h) Droping point.
+	j) Booking Agent Name (It can be Auto generate from agent login)
+
+	2.1 - All data can be stored in our backend.
+	2.2 - it needs to help us to collect all users data to improve our database.
+	2.3 - and also travels owner can see his all seats status and details.
+
+3) User Application.
+	* User Login can be done by OTP based only. (either mobile or email.)
+	3.1 ) Once user came on front page he should have to fill below inputs.
+		a) Boarding From.
+		b) Arriving To.
+		c) Date of journey.
+		d) Type of Bus (Seater or Sleeper or All).
+	3.2 ) After Submiting above fields he should be able to see all buses which running on this route.
+		a) Bus details can shown in one widget.
+			* Bus Name.
+			* Bus Rating.
+			* Bus Fare.
+			* Bus Boarding time.
+			* Bus Droping time.
+			* Total Time will take journey.
+			* Total Numbers of Seats.
+			* Total Numbers of available seats.
+		b) Once User select a bus widget then open Bus Details view, which looks like below.
+			* Bus Name.
+			* Bus Date and Boarding Time.
+			* Bus Type (sleeper or seater.)
+			* Bus Seating map with available seats.
+			* Already booked sets can be show Read Only mode.
+			* Ladies reserved seats can be highlighted with purple color.
+		c) Once User select seats then continue for boarding points
+			* All Boarding points with every boarding point time.
+		d) Once User select boarding point then he should have to select droping point.
+			* All  Droping points without droping time.
+		e) After selecting boarding and droping point then user have to fill his personal details. i.e. below.
+			* Pre Existing Data from process from process (3.2.c) and (3.2.d).
+				a) Number of Passengers, (3.2.b)
+				b) Id Number of reserved seats, (3.2.b).
+				c) Boarding Point (3.2.c)
+				d) Droping point.
+			* New Data
+				a) Mobile Number of main Passenger (Fetch default from account details).
+				b) Each passenger name.
+				c) Each passenger age.
+				d) Each passenger sex.
+				e) Check box for life insurance from ICICI lombard.
+		f) Once got all inputs, Then Go to Payment Gateway.
+			a) debit card, google_pay, paytm
+	3.3 ) User can manage his tickets.
+		a) User can able to see his previous journey and tickets.
+		b) User can able to see his upcoming journey and tickets.
+		c) User can see his ticket status i.e. (confirmed or waiting.)
+		c) User can able to cancel the tickets from some conditions.
+		d) also user can able to see canceled tickets.
+
+	3.4 ) In My Account Section.
+		a) My Bookings.
+		b) Wallet.
+		c) Saved Cards.
+		d) About Us.
+		e) Logout.
+
+4) Backend.
+	a) Needed RestFul API.
+5) Database.
+	a) postgreSQL, oracleSQL or mongoDB.
+6) Frontend.
+	a) Web Frontend, Angular or react.
+	b) Android Frontend, React-Native.
+	c) IOS Frontend, React-Native.
